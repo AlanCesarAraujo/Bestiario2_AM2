@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+	<!-- O SITE DEVE SER VISUALIZADO EM 67% DE ZOOM DA TELA! -->
+
+<html>
+
+	<head>
+		<title> Lista de Drogas </title>
+		<meta charset="utf-8">
+		<script src= "jquery-3.2.1.min.js"></script>
+		<script src= "jquery.js"></script>
+		<script src= "jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="estilo2.css" type="text/css">
+		<link rel="stylesheet" href="jquery-ui.theme.min.css">
+		<link rel="stylesheet" href="jquery-ui.min.css">
+
+
+		<script>
+		$(document).ready(function(){
+
+		$("#list1").hide()
+		$("#list2").hide()
+		$("#list3").hide()
+		$("#smoke").hide()
+
+		$("#menunaturais").click(function(){
+			$("#list1").toggle()
+			$("#list2").hide()
+			$("#list3").hide()
+			
+		});
+
+		$("#menusemisinteticas").click(function(){
+			$("#list2").toggle()
+			$("#list1").hide()
+			$("#list3").hide()
+		});
+
+		$("#menusinteticas").click(function(){
+			$("#list3").toggle()
+			$("#list1").hide()
+			$("#list2").hide()
+		});
+
+		$(".imagem").draggable()
+	
+
+		$("#pipe").droppable({
+			drop: function(){
+			$(".fumavel").click(function(){
+			$(this).hide(100)
+			$(smoke).show(100)
+			$(".fumavel").off("click");
+			});
+		}
+			});
+
+		$("#seringa").droppable({
+			drop: function(){
+			$(".injetavel").click(function(){
+			$(this).hide(100)
+			$("#seringa").attr("src","../Imagens/seringa2.png")
+			$(".injetavel").off("click");
+			});
+		}
+		});
+
+		$("#prato").droppable({
+			drop: function(){
+			$(".comestivel").click(function(){
+			$(this).hide(100)
+			$("#prato").attr("src","../Imagens/prato2.png")
+			$(".comestivel").off("click");
+			});
+		}
+		});
+
+	
+
+		var availableTags = [
+		"Maconha",
+		"Haxixe",
+		"Cogumelos",
+		"Ópio",
+		"Morfina",
+		"Heroína",
+		"Cocaína",
+		"Crack",
+		"LSD",
+		"Ecstasy",
+		"Metanfetamina",
+		"Anfetamina"
+		];
+
+		$("#tags").autocomplete({
+			source: availableTags
+		});
+		
+		//$("img[src*=Imagens]").attr('src','../Imagens/alpaca.jpg')
+		//$(".imagem").attr('src','../Imagens/alpaca.jpg')
+		});
+		</script>
+
+	</head>
+
+
+	<body>
+		<header id="titulo">
+			<h1> Lista Divertida de Drogas Ilícitas </h1>
+			<image><img src="../Imagens/pipe.png" id="pipe"></image>
+			<image><img src="../Imagens/smoke.png" id="smoke"></image>
+			<image><img src="../Imagens/seringa.png" id="seringa"></image>
+			<image><img src="../Imagens/prato.png" id="prato"></image>
+
+		</header>
+
+		<aside>
+		<label for="tags" id="textopesquisa" class="pesquisa">Pesquise a Droga: </label>
+		<br>
+		<input id="tags" class="pesquisa" size="18%">
+		</aside>
+
+		<nav class="main-nav2">
+			<ul>
+
+
+				<li><a href="#titulo"> Lista de Drogas </a></li>
+				<li><a href="apresentacaopage.html"> Apresentação </a></li>
+				<li><a href="sobrepage.html"> Sobre </a></li>
+
+
+			</ul>
+		</nav>
+
+
+		<nav class="main-nav">
+			<ul>
+				<p id= "menunaturais"> Drogas Naturais </p>
+				<div id="drop1">
+						<ul id="list1">
+							<li><a href="#maconha"> Maconha </a></li>
+							<li><a href="#haxixe"> Haxixe </a></li>
+							<li><a href="#cogumelo"> Cogumelos</a></li>
+	  						<li><a href="#opio"> Ópio </a></li>
+  						</ul>
+  				</div>
+
+					<p id= "menusemisinteticas"> Drogas Semi-Sintéticas </p>
+					<div id="drop2">
+						<ul id="list2">
+							<li><a href="#morfina"> Morfina </a></li>
+							<li><a href="#heroina"> Heroína </a></li>
+							<li><a href="#cocaina"> Cocaína </a></li>
+							<li><a href="#crack"> Crack </a></li>
+						</ul>
+    				</div>
+
+					<p id= "menusinteticas"> Drogas Sintéticas </p>
+					<div id="drop3">
+						<ul id="list3">
+							<li><a href="#lsd"> LSD </a></li>
+							<li><a href="#ecstasy"> Ecstasy </a></li>
+							<li><a href="#metanfetamina"> Metanfetamina </a></li>
+							<li><a href="#anfetamina"> Anfetamina </a></li>
+						</ul>
+					</div>
+   			</ul>
+		</nav>
+
+		<section>
+				<h2 id="naturais"> Drogas Naturais </h2>
+				
+				<div id="drogas1">
+				<article id="maconha">
+					<h3 id="maconhaTitle" class="TituloDrogas"> Maconha </h3>
+					
+					<p> O termo maconha refere-se a várias drogas psicoativas e medicamentos derivados de plantas do gênero Cannabis. Farmacologicamente, o principal constituinte psicoativo desse tipo de planta é o <b> tetrahidrocanabinol (THC) </b> que varia de quantidade, dependendo da forma como a maconha é produzida ou fumada. É uma das drogas mais usadas no Brasil, por ser barata e de fácil acesso nos grandes centros urbanos. </p>
+					
+					<h4> <b> Consumo </b> </h4>
+					
+					<p> Cannabis pode ser fumada (em cachimbos ou enrolada em papel) ou ingerida. </p>
+					
+					<h4> <b> Efeitos </b> </h4>
+					
+					<p> Relaxamento; Leve euforia; Tempo de reação mais lento; Percepção sensorial distorcida; Equilíbrio e coordenação prejudicados; Vermelhidão ocular, Aumento da frequência cardíaca e do apetite; Secura da boca. </p>
+
+					<figure> <img src="../Imagens/maconha.png" width="220px" id=imgMaconha alt="imagem qualquer" class="imagem fumavel comestivel" > </figure>
+				</article>
+
+
+				<article id="haxixe">
+					<h3 id="haxixeTitle" class="TituloDrogas"> Haxixe </h3>
+
+					<p> Haxixe é o extrato resinoso extraído do tricoma, das flores e das inflorescências da Cannabis, possuindo assim o mesmo constituindo psicoativo da maconha, o <b> tetrahidrocanabinol (THC) </b>. O haxixe encontra-se difundido principalmente no oriente e norte da África, onde o consumo por parte dos árabes remonta a tempos antigos. </p>
+
+					<h4> <b> Consumo </b> </h4>
+
+					<p> O haxixe pode ser fumado ou ingerido. </p>
+
+					<h4> <b> Efeitos </b> </h4>
+			
+					<p>Relaxamento; Leve euforia; Tempo de reação mais lento; Percepção sensorial distorcida; Equilíbrio e coordenação prejudicados; Vermelhidão ocular, Aumento da frequência cardíaca e do apetite; Secura da boca. </p>
+
+					<figure><img src="../Imagens/haxixe.png" width="280px" img= "imgHaxixe" alt="imagem qualquer" class="imagem fumavel comestivel"> </figure>
+				</article>
+
+
+				<article id="cogumelo">
+					<h3 id="cogumeloTitle" class="TituloDrogas"> Cogumelos Alucinógenos </h3>
+
+					<p> Cogumelos alucinógenos, como o <i> Amanita muscaria </i> são fungos com propriedades alucinógenas, utilizados por diversos povos em atividades culturais e como drogas recreativas. O "Chá de cogumelos" é muito relacionado ao movimento hippie dos anos 60, que devido à <b> psilocibina </b> proporicionava efeitos alucinógenos que "abriam as portas da percepção". Porém, quando ingerido em sua forma natural, os efeitos se mostram mais intensos, já que a alta temperatura usada no "chá" destrói parte de seu potencial. Os mais antigos textos sobre o seu uso são da cultura asteca.  </p>
+				
+					<h4> <b> Consumo </b> </h4>
+				
+					<p>Cogumelos são injeridos, muitas vezes na forma de chás. </p>
+					
+					<h4> <b> Efeitos </b> </h4> 
+				
+					<p>Estados alterados de percepção e de sentimento; Alucinações visuais e sonoras; Náuseas; Nervosismo; Paranóia; Pânico. </p>
+
+					<figure><img src="../Imagens/cogumelo.png" width="250px" alt="imagem qualquer" class="imagem comestivel"></figure>
+				</article>
+
+
+				<article id="opio">
+					<h3 id="opioTitle" class="TituloDrogas"> Ópio </h3>
+
+					<p> Ópio é um suco espesso, extraído por incisão feita na cápsula de papoulas soníferas (gênero Papaver) depois da floração, e que é utilizada como narcótico. O ópio tem um cheiro típico, que é desagradável. Seu sabor é amargo e um pouco acre, sendo castanha a sua cor. Os principais alcalóides do ópio são: a morfina, a codeína, a tebaína, a papaverina, a narcotina e a narceína. A medicina o utiliza, assim como os alcaloides que ele contém, como sonífero analgésico. O suco da papoula possui um poder hipnótico, euforizante e altamente viciante, conhecido há mais de seis mil anos pelos sumérios. </p>
+			
+					<h4> <b> Consumo </b> </h4>
+
+					<p> O ópio é fumado em cachimbos ou ingerido (mascado). </p>
+
+					<h4> <b> Efeitos </b> </h4>
+
+					<p> Euforia (imedita); Coordenação prejudicada; Tontura; Confusão; Sedação; Sonolência; Analgesia; Náusea; Hipotensão; Tranquilidade; Sensação de peso no corpo; Respiração retardada; Miose. </p>
+			
+					<figure><img src="../Imagens/opium.png" width="155px" alt="imagem qualquer"  class="imagem fumavel comestivel"></figure>
+				</article>
+				</div>
+
+
+				<h2 id="semisinteticas"> Drogas Semi-sintéticas </h2>
+
+				<div id="drogas2">
+				<article id="morfina">
+					<h3 id="morfinaTitle" class="TituloDrogas"> Morfina </h3>
+
+					<p>  A morfina é um fármaco narcótico de alto poder analgésico usado para aliviar dores severas. Droga Semi-sintética pertencente ao grupo dos opioides, o nome da substância tem origem no deus grego dos sonhos, Morfeu. Com a invenção da agulha hipodérmica em 1857, o uso da morfina generalizou-se para o tratamento da dor crônica, da dor aguda e como anestésico. Foi utilizada na Guerra Civil Americana, resultando em 400 mil soldados com síndrome de dependência devido ao seu uso impróprio. A heroína foi derivada da morfina em 1874. </p>
+			
+					<h4> <b> Consumo </b> </h4>
+					
+					<p> A morfina pode ser ingerida e injetada no meio intravenoso e intramuscular. </p>
+					
+					<h4> <b> Efeitos </b> </h4>
+					
+					<p>Euforia (imedita); Sedação; Supressão da dor; Depressão respiratória; Miose; Sonolência; Analgesia; Tranquilidade; Rigidez Muscular; Ansiedade; Possível Coma. </p>
+
+					<figure><img src="../Imagens/morfina.png" width="295px" alt="imagem qualquer"  class="imagem injetavel comestivel"></figure>
+				</article>
+
+
+				<article id="heroina">
+					<h3 id="heroinaTitle" class="TituloDrogas"> Heroína </h3>
+
+					<p> Heroína, ou <b> diacetilmorfina </b>, é uma droga opióide semissintética obtida a partir de plantas da espécie Papaver somniferum, da qual é extraído o ópio. Durante o processamento do ópio origina-se a morfina que então é transformada em heroína. Trata-se de um entorpecente, que provoca diminuição da atividade do SNC, ou seja, é uma substância depressora. Produz sensações de prazer intenso, muitas vezes comparados com um orgasmo. Após essa fase de euforia ocorre um período de sedação. A droga causa dependência de forma rápida e o indivíduo busca maiores doses para obter o mesmo efeito. </p>
+			
+					<h4> <b> Consumo </b> </h4>
+				
+					<p> A heroína geralmente é injetada ou aspirada pelo nariz, mas pode também ser fumada. </p>
+				
+					<h4> <b> Efeitos </b> </h4>
+				
+					<p> Euforia (imediata); Coordenação prejudicada; Tontura; Confusão; Sedação; Sonolência; Analgesia; Náusea; Hipotensão; Tranquilidade; Sensação de peso no corpo; Respiração retardada; Miose. </p>
+
+					<figure><img src="../Imagens/heroina.png" width="290px" alt="imagem qualquer" class="imagem injetavel comestivel"> </figure>
+				</article>
+		
+
+				<article id="cocaina">
+					
+					<h3 id="cocainaTitle" class="TituloDrogas"> Cocaína </h3>
+					<p> Cocaína, ou <b> benzoilmetilecgonina </b>é um alcaloide usado como droga, derivada da <i> Erythroxylum coca </i>, com efeitos anestésicos e cujo uso contínuo causa dependência, hipertensão arterial e distúrbios psiquiátricos. A produção da droga é realizada através de extração da folha da coca, utilizando como solventes álcalis, ácido sulfúrico e querosene. Fisicamente, estimula os receptores-chave do cérebro que, por sua vez, cria uma euforia à qual os usuários rapidamente desenvolvem tolerância. Apenas o uso de doses mais elevadas e mais frequentes podem causar o mesmo efeito. </p>
+
+					<h4> <b> Consumo </b> </h4>
+
+					<p> É mais frequentemente cheirada, sendo o pó absorvido pela circulação sanguínea através dos tecidos nasais. Ela também pode ser ingerida ou esfregada nas gengivas. Existem usuários que a injetam para que a droga seja absorvida mais rapidamente pelo corpo, mas isto aumenta substancialmente o risco de overdose. </p>
+
+					<h4> <b> Efeitos </b> </h4>
+
+					<p> Aumento da freqüência cardíaca, da pressão arterial, da temperatura corporal, do metabolismo; Sentimentos de alegria; Euforia; Aumento da energia, do alerta mental; Tremores; Irritabilidade; ansiedade; Pânico; Paranóia; Comportamento violento; Psicose;. </p>
+
+					<figure><img src="../Imagens/cocaina.png" width="270px" alt="imagem qualquer" class="imagem injetavel comestivel"></figure>
+				</article>
+
+
+				<article id="crack">
+					<h3 id="crackTitle" class="TituloDrogas"> Crack </h3>
+
+					<p>	Crack, também chamado de pedra ou rocha, é cocaína solidificada em cristais. O nome inglês crack deriva do seu barulho peculiar ao ser fumado. É a forma de cocaína mais viciante e também a mais viciante de todas as drogas. As pedras de crack oferecem uma curta, mas intensa euforia aos fumantes. Pode-se desenvolver uma tolerância considerável ao uso do crack, é quando os viciados procuram atingir o mesmo prazer de sua primeira experiência. Alguns usuários aumentam a frequência das doses para intensificar e prolongar os efeitos eufóricos. </p>
+					
+					<h4> <b> Consumo </b> </h4>
+				
+					<p> Para o consumo inalatório da droga, são utilizados cachimbos elaborados pelos próprios usuários, geralmente de alumínio e compartilhados entre o grupo de uso. Também tem sido comum o consumo de cigarros comuns ou de maconha com fragmentos de pedras de crack. A forma injetável de cocaína não teve sucesso e foi quase extinta no Brasil, substituído pelo crack que provoca efeito semelhante. </p>
+				
+					<h4> <b> Efeitos </b> </h4>
+				
+					<p> Aumento da freqüência cardíaca, da pressão arterial; Sentimentos de alegria; Euforia; Aumento da energia, do alerta mental; Tremores; Irritabilidade; ansiedade; Pânico; Paranóia; Comportamento violento; Psicose; Tremores; Perda de apetite; Alterações na percepção. </p>
+			
+					<figure><img src="../Imagens/crack.png" width="230px" alt="imagem qualquer" class="imagem injetavel fumavel"></figure>
+				</article>
+			</div>
+
+
+				<h2 id="sinteticas"> Drogas Sintéticas </h2>
+				
+				<div id= "drogas3">
+				<article id="lsd">
+					<h3 id="lsdTitle" class="TituloDrogas"> LSD </h3>
+
+					<p> O LSD é uma das mais potentes substâncias alucinógenas conhecidas. É obtido a partir da <b> dietilamida do ácido lisérgico</b>, que se encontra num fungo que se desenvolve no centeio e em outros grãos. O LSD atingiu o apogeu de sua popularidade na década de 1960, estando seu consumo constantemente associado ao movimento psicodélico. O seu efeito pode durar até 12 horas. </p>
+
+					<h4> <b> Consumo </b> </h4>
+
+					<p> É produzido na forma de cristal, mas transformado em uma folha fina de papel decorado para o consumo. É ingerida ou absorvida pela língua. </p>
+
+					<h4> <b> Efeitos </b> </h4> 
+
+					<p>Estados alterados de percepção e de sentimento; Alucinações visuais e sonoras; Náuseas; Aumento da temperatura corporal, da freqüência cardíaca, e da pressão arterial; Sudorese; insônia; Comportamento impulsivo. </p>
+
+					<figure><img src="../Imagens/lsd.png" width="170px" alt="imagem qualquer" class="imagem comestivel"></figure>
+				</article>
+
+
+				<article id="ecstasy">
+					<h3 id="ecstasyTitle" class="TituloDrogas"> Ecstasy </h3>
+
+					<p> O Ecstasy, também conhecida como bala, é uma droga sintética, fabricada em laboratório. O princípio ativo do Ecstasy é uma substância chamada <b>metilenodioximetanfetamina</b>, que pode ser abreviado de MDMA, que é um tipo de anfetamina (estimulante), também tem efeitos parecidos com os alucinógenos. Age na fisiologia humana diminuindo da reabsorção da serotonina, dopamina e noradrenalina no cérebro, onde estas substâncias ficarão em maior contato entre as sinapses. É extremamente utilizada em festivais e clubes noturnos, por seus efeitos euforizantes e desinibidores. </p>
+
+					<h4> <b> Consumo </b> </h4>
+
+					<p> O ecstasy pode ser injerido, injetado ou aspirado pelo nariz. </p>
+
+					<h4> <b> Efeitos </b> </h4>
+
+					<p> Efeitos alucinogénicos leves; Sensibilidade tátil aumentada; Sentimentos empáticos; Inibição reduzida; Ansiedade; Arrepios; Sudorese e perda de líquidos; Bruxismo. </p>
+
+					<figure><img src="../Imagens/ecstasy.png" width="260px" alt="imagem qualquer" class="imagem injetavel comestivel"></figure>
+				</article>
+
+
+				<article id="metanfetamina">
+					<h3 id="metanfetaminaTitle" class="TituloDrogas"> Metanfetamina </h3>
+
+					<p> A metanfetamina, ou <b> N-methylamphetamine </b>, é uma droga uma droga branca cristalina muito potente e altamente viciante, cujos efeitos se manifestam no sistema nervoso central e periférico. A MA exerce seus efeitos ao aumentar agudamente as quantidades de dopamina, noradrenalina e serotonina na fenda sináptica, ampliando assim a neurotransmissão monoaminérgica. Os efeitos desta droga geralmente duram cerca de 6 a 8 horas. Pessoas fortes que conseguem controlar o uso de outras drogas se viram fora de controle com cristal. </p>
+
+					<h4> <b> Consumo </b> </h4>
+
+					<p> Na forma de cristal, pode ser fumada. Metanfetamina na forma de pó é geralmente cheirada, mas pode ser misturada em água e injetada por via intravenosa. Pode ainda ser misturada numa garrafa com água e ser bebida. </p>
+
+					<h4> <b> Efeitos </b> </h4>
+
+					<p> Aumento da freqüência cardíaca, da pressão arterial, da temperatura corporal, do metabolismo; Sentimentos de alegria; Euforia; Aumento da energia, do alerta mental; Perda de apetite; Irritabilidade; Ansiedade; Pânico; Paranóia; Comportamento violento; Psicose. </p>
+
+					<figure><img src="../Imagens/metanfetamina.png" width="200px" alt="imagem qualquer" class="imagem injetavel fumavel comestivel"></figure>
+				</article>
+
+
+				<article id="anfetamina">
+					<h3 id="anfetaminaTitle" class="TituloDrogas"> Anfetamina </h3>
+
+					<p> Anfetaminas são substâncias que têm a estrutura química básica da beta-fenetilamina.  A anfetamina é uma droga estimulante do sistema nervoso central, que provoca o aumento das capacidades físicas e psíquicas. É utilizada na medicina no tratamento do transtorno de déficit de atenção e hiperatividade (ADHD), narcolepsia e obesidade, mas também usada como narcótico. Possui propriedades extremamente viciantes, sendo totalmente proibida em alguns países da Europa. É muito utilizada no Brasil por caminhoneiros que querem permanecer acordados durante seus turnos.  </p>
+
+					<h4> <b> Consumo </b> </h4>
+
+					<p> A Anfetamina pode ser fumada, anfetamina na forma de pó é geralmente cheirada, mas pode ser misturada em água e injetada por via intravenosa ou até ingerida. </p>
+
+					<h4> <b> Efeitos </b> </h4>
+
+					<p>  Aumento da freqüência cardíaca, da pressão arterial, da temperatura corporal, do metabolismo; Sentimentos de alegria; Euforia; Aumento da energia, do alerta mental; Perda de apetite; Irritabilidade; Ansiedade; Pânico; Paranóia; Comportamento violento; Psicose.  </p>
+
+					<figure><img src="../Imagens/anfetamina.png" width="295px" alt="imagem qualquer"  class="imagem injetavel fumavel comestivel"></figure>
+				</article>
+			</div>
+		</section>
+
+	    <footer>
+	        <hr>
+	        <h3>Não usem drogas, crianças!</h3>
+	        <h2>Website by Leonardo Sambonet ™</h2>
+	       	<h3>Contato: ilovebatata@gmail.com <br>
+	       <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	       	<img id="imglicensa" alt="Licença Creative Commons" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+	       </a>
+	       <p> Este obra está licenciado com uma Licença <br>
+	       	<a id="licensa" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	       		Creative Commons Atribuição 4.0 Internacional</a></p>
+		</footer>
+	</body>
+
+</html>
+

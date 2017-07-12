@@ -1,0 +1,313 @@
+@charset "UTF-8"; 
+
+	/* O SITE DEVE SER VISUALIZADO EM 67% DE ZOOM DA TELA! */
+
+body{
+	margin: 3% 15%;  /* Margem vertical e horizontal de tudo no site */
+	font-family: sans-serif; /* Fonte Usada */
+	color: #ffffff; /* Cor da fonte Usada */
+
+	background: #4568DC;  /* Caso o gradiente não rode no browser usado */
+	background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Gradiente em alguns browsers*/
+	background: linear-gradient(to right, #B06AB3, #4568DC); /* Gradiente que roda em outros browsers*/
+}
+
+p{
+	font-size: 22px; /* Tamanho da fonte Usada */
+}
+
+h1{
+	font-size: 70px; /* Tamanho da fonte Usada */
+}
+
+
+h2{
+	font-size: 48px; /* Tamanho da fonte Usada */
+}
+
+h3{
+	font-size: 40px; /* Tamanho da fonte Usada */
+}
+
+h4{
+	font-size: 29px; /* Tamanho da fonte Usada */
+}
+
+aside{
+	float: left;
+	position: fixed;
+	left: 33px;
+	top:120px;
+	width: 400px;
+}
+
+#titulo{
+	text-align: center; /* Título alinhado ao centro */
+	color:#fff; /* Cor do título */
+	margin-top: 20px;
+}
+
+#pipe{
+	position:fixed;
+	top:130px;
+	right:-20px;
+	width:14%;
+}
+
+#smoke{
+	position:fixed;
+	right:110px;
+	top:15px;
+	width:11%;
+}
+
+#seringa{
+	position:fixed;
+	right:5px;
+	top:370px;
+	width:13%;
+}
+
+#prato{
+	position:fixed;
+	right:5px;
+	top:680px;
+	width:13%;
+}
+
+/* Menu de cima, que redireciona entre as páginas */
+
+.main-nav2{	
+	margin: 10px 40px;
+	background-color: #FFBB00;			/* Recebe toda a largura da página, fundo branco e fonte roxa. Altura de 65px */
+	height: 67px;	
+	border-radius: 25px;       
+	
+}
+.main-nav2 ul{	/* Display é flex pra deixar um botão do lado do outro, margem vertical automática. Width ajuda a centralizar as palavras */
+
+	display:flex;			/* Display é flex pra deixar um botão do lado do outro, margem vertical automática. Width ajuda a centralizar as palavras */
+	margin: 0px 120px;
+}
+.main-nav2 li{
+	list-style:none;		/* O menu não possui nenhum estilo definido, fonte 20px. Fundo branco. */
+	font-size: 20px;      
+	background-color: #FFBB00;
+	padding: 20px 98px;					/* Elemento que aumenta a altura vertical do menu para caberem as letras completamente */
+	text-align: center;
+			/* Margem que também ajuda a centralizar as palavras */
+
+}
+.main-nav2 li:hover{              
+	background-color:#480984;		/* Características do Menu de cima quando o mouse está em cima */
+	transition: 0.5s;   /* Transição da cor de fundo (para roxo mais escuro) quando o mouse está em cima dura 0,5s */
+	cursor:pointer;
+}
+.main-nav2 li a {
+	text-decoration: none;	/* As palavras do menu não são estilizadas, a cor é da fonte é branca e a fonte é de tamanho 37px */
+	color: #fff;
+	font-size: 23px;
+}
+
+/* Menu de Baixo, que redireciona entre as drogas */
+
+.main-nav{
+	background-color: #FFBB00;		/* Recebe toda a largura da página, fundo roxo e fonte branca */
+	margin-bottom: 30px;
+	position:fixed;
+	margin-left:5%;
+	width:12%;
+	border-radius: 25px;
+	float:left;
+	left: -70px;
+	top: 310px;
+	
+}
+.main-nav ul{
+	text-align: center;
+	font-size: 20px;
+	margin-top: -0px;
+
+
+}
+.main-nav li{
+	list-style: none;
+	background-color: #fff;
+	text-align: center;	
+	font-size: 20px;
+	padding: 25px 0px;			/* Elemento que aumenta a altura vertical do menu para caberem as letras completamente */
+
+}
+
+.main-nav li a {
+	text-decoration:none;
+	text-align: center;			/* As palavras do menu não são estilizadas, a cor é da fonte é roxa */
+	color: #FFBB00;
+}
+
+#menunaturais{
+	float: left;
+}
+
+#menusemisinteticas{
+	float: left;
+	text-align: left;
+}
+
+#menusinteticas{
+	float: left;
+}
+
+#list1{
+	float: left;
+
+}
+
+#list2{
+	float: left;
+}
+
+#list3{
+	float: left;
+	margin-bottom: 30px;
+}
+
+footer{
+	clear: left;               /* Footer não se aplica ao float, possui margem em cima de 150px e é alinhado ao centro */
+	margin-top: 90px;
+	text-align: center;
+}
+
+article{
+	width: 45%; 			 /* Todos os artigos de drogas possuem width 45% (quase metade da largura da página), são centralizados e são afastados para a direita */
+	padding-left: 40px;
+	margin-top: 30px;
+	
+
+}
+
+div{							/* Todas as divs do código terão margem em cima */
+	margin-top: 10px;
+}
+
+.TituloDrogas{
+	text-align: center;			/* Todos os títulos de drogas são centralizados */
+}
+
+#maconha, #haxixe, #cogumelo, #opio, #morfina, #heroina, #cocaina, #crack, #lsd, #ecstasy, #metanfetamina, #anfetamina{
+	float: left;		/* Todas drogas são com float: left, para caberem 2 na mesma linha */
+}						/* Eu não criei uma classe porque é nessa parte que o código apresenta bugs estranhos que destroem a formatação. Essa foi uma solução. */
+
+#maconha, #haxixe{
+	height: 1000px;		/* Nem todos os artigos têm o mesmo tamanho vertical, aqui defini a altura de cada par de artigos da mesma linha */
+}
+
+#cogumelo, #opio, #morfina, #heroina, #lsd, #ecstasy{
+	height: 1050px;
+}
+
+#cocaina, #crack{
+	height: 1200px;
+}
+
+#metanfetamina, #anfetamina{
+	height: 1100px;
+}
+
+
+
+#naturais{							/* Esses são os títulos que separam as 3 categorias de drogas */
+	clear: left;					/* Não se aplica ao float dos artigos */
+	text-align: center;				/* Centralizados */
+	background-color: #fff;			/* Fundo branco e cor de fonte roxa */
+	color:#FFBB00;
+	margin: 10px 40px;
+	margin-top: 30px;		
+	border-radius: 25px;			/* Margem de 40 px para as imagens são sobreporem os títulos das classes */
+}
+
+
+#semisinteticas{
+	clear: left;
+	text-align: center;
+	background-color:#fff;
+	color:#FFBB00;
+	margin: 20px 40px;
+	border-radius: 25px;
+}
+
+#sinteticas{
+	clear: left;
+	text-align: center;
+	background-color:#fff;
+	color:#FFBB00;
+	margin: 20px 40px;
+	border-radius: 25px;
+}
+
+
+.imagem{
+	margin-left: 25%;	/* Para ser centralizada no artigo, a imagem possui margem de 30% para a esquerda */
+}
+
+.apresentacao{
+	clear: left;					/* Não se aplica ao float dos artigos */
+	text-align: center;				/* Centralizados */
+	background-color: #fff;			/* Fundo branco e cor de fonte roxa */
+	color:#FFBB00;
+	margin: 10px 40px;
+	margin-top: 30px;		
+	border-radius: 25px;	
+}
+
+
+#introducao{
+	text-align: center;		/* Esse é o ID do parágrafo único das 2 páginas secundárias, centralizado */
+}
+
+#school{
+	margin: 0% 35%;			/* Esse é o ID da imagem das duas páginas secundárias, centralizadas ao ser colocada margem de 32% */
+}
+
+#licensa{
+	font-size: 20px;    /* fonte da licença */
+}
+
+#imglicensa{
+	margin-top: 35px;		/* margem de cima da imagem da fonte da licença */
+}
+
+.pergunta{
+	text-align: center;  /* Tudo do questionário é centralizado */
+}
+
+form{
+	font-size: 40px;			/* Tamanho da fonte dos itens do questionário. Eles possuem margem entre eles e são centralizados. */
+	text-align: center;
+	margin-left: 20px;
+	overflow: default;			/*Overflow é default */
+}	
+
+#enviar{
+	font-size: 30px;			/* tamanho e margens do botão 'enviar' */
+	margin-top: 30px;
+	margin-left: 70%;
+}
+
+input[type="checkbox"]{
+  width: 6.25em; height: 2.25em;					/* propriedades: largura, altura, fundo, sombra dos quadradinhos do questionário */
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+
+.pesquisa{
+	font-size: 22px;
+	margin-top: 17px;
+}
+
+#textopesquisa{
+	float: left;
+	margin-top: 93px;
+}
