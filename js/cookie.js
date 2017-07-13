@@ -1,4 +1,4 @@
-window.onload = function(name, value, days){
+window.onload = function(){
 
 	function storeValues(form){
 	    writeCookie("droga1", form.droga1.value, 1);
@@ -16,7 +16,7 @@ window.onload = function(name, value, days){
 	    return true;
   	}
 
-	function writeCoockie(){
+	function writeCookie(name, value, days){
 		var expires = "";
 
 		if(days){
@@ -26,15 +26,15 @@ window.onload = function(name, value, days){
 		} 
 
 		if(value != null && value != null && value != null){
-			document.coockie = name + "=" + value + expires + "path=/";
+			document.cookie = name + "=" + value + expires + "path=/";
 		}
 	}
 
-	function readCoockie(name){
+	function readCookie(name){
 		var searchName = name + "=";
-		var coockies = document.coockie.split(';');
-		for(var i = 0; i<coockies.length; i++){
-			var c = coockies[i];
+		var cookies = document.cookie.split(';');
+		for(var i = 0; i<cookies.length; i++){
+			var c = cookies[i];
 			while(c.charAt(0)==' ')
 			c = c.substring(1, c.length);
 			if(c.indexOf(searchname) == 0)

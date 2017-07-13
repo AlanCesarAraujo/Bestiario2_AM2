@@ -7,110 +7,23 @@
 	<head>
 		<title> Lista de Drogas </title>
 		<meta charset="utf-8">
-		<script src= "jquery-3.2.1.min.js"></script>
-		<script src= "jquery.js"></script>
-		<script src= "jquery-ui.min.js"></script>
-		<link rel="stylesheet" href="estilo2.css" type="text/css">
-		<link rel="stylesheet" href="jquery-ui.theme.min.css">
-		<link rel="stylesheet" href="jquery-ui.min.css">
-
-
-		<script>
-		$(document).ready(function(){
-
-		$("#list1").hide()
-		$("#list2").hide()
-		$("#list3").hide()
-		$("#smoke").hide()
-
-		$("#menunaturais").click(function(){
-			$("#list1").toggle()
-			$("#list2").hide()
-			$("#list3").hide()
-			
-		});
-
-		$("#menusemisinteticas").click(function(){
-			$("#list2").toggle()
-			$("#list1").hide()
-			$("#list3").hide()
-		});
-
-		$("#menusinteticas").click(function(){
-			$("#list3").toggle()
-			$("#list1").hide()
-			$("#list2").hide()
-		});
-
-		$(".imagem").draggable()
-	
-
-		$("#pipe").droppable({
-			drop: function(){
-			$(".fumavel").click(function(){
-			$(this).hide(100)
-			$(smoke).show(100)
-			$(".fumavel").off("click");
-			});
-		}
-			});
-
-		$("#seringa").droppable({
-			drop: function(){
-			$(".injetavel").click(function(){
-			$(this).hide(100)
-			$("#seringa").attr("src","../Imagens/seringa2.png")
-			$(".injetavel").off("click");
-			});
-		}
-		});
-
-		$("#prato").droppable({
-			drop: function(){
-			$(".comestivel").click(function(){
-			$(this).hide(100)
-			$("#prato").attr("src","../Imagens/prato2.png")
-			$(".comestivel").off("click");
-			});
-		}
-		});
-
-	
-
-		var availableTags = [
-		"Maconha",
-		"Haxixe",
-		"Cogumelos",
-		"Ópio",
-		"Morfina",
-		"Heroína",
-		"Cocaína",
-		"Crack",
-		"LSD",
-		"Ecstasy",
-		"Metanfetamina",
-		"Anfetamina"
-		];
-
-		$("#tags").autocomplete({
-			source: availableTags
-		});
-		
-		//$("img[src*=Imagens]").attr('src','../Imagens/alpaca.jpg')
-		//$(".imagem").attr('src','../Imagens/alpaca.jpg')
-		});
-		</script>
-
+		<script src= "js/jquery-3.2.1.min.js"></script>
+		<script src= "js/jquery.js"></script>
+		<script src= "js/main.js"></script>
+		<script src= "js/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="css/estilo2.css" type="text/css">
+		<link rel="stylesheet" href="js/jquery-ui.theme.min.css">
+		<link rel="stylesheet" href="js/jquery-ui.min.css">		
 	</head>
 
 
 	<body>
 		<header id="titulo">
 			<h1> Lista Divertida de Drogas Ilícitas </h1>
-			<image><img src="../Imagens/pipe.png" id="pipe"></image>
-			<image><img src="../Imagens/smoke.png" id="smoke"></image>
-			<image><img src="../Imagens/seringa.png" id="seringa"></image>
-			<image><img src="../Imagens/prato.png" id="prato"></image>
+			<image><img src="img/pipe.png" id="pipe"></image>
+			<image><img src="img/smoke.png" id="smoke"></image>
+			<image><img src="img/seringa.png" id="seringa"></image>
+			<image><img src="img/prato.png" id="prato"></image>
 
 		</header>
 
@@ -125,8 +38,8 @@
 
 
 				<li><a href="#titulo"> Lista de Drogas </a></li>
-				<li><a href="apresentacaopage.html"> Apresentação </a></li>
-				<li><a href="sobrepage.html"> Sobre </a></li>
+				<li><a href="apresentacao.html"> Apresentação </a></li>
+				<li><a href="sobre.html"> Sobre </a></li>
 
 
 			</ul>
@@ -184,7 +97,7 @@
 					
 					<p> Relaxamento; Leve euforia; Tempo de reação mais lento; Percepção sensorial distorcida; Equilíbrio e coordenação prejudicados; Vermelhidão ocular, Aumento da frequência cardíaca e do apetite; Secura da boca. </p>
 
-					<figure> <img src="../Imagens/maconha.png" width="220px" id=imgMaconha alt="imagem qualquer" class="imagem fumavel comestivel" > </figure>
+					<figure> <img src="img/maconha.png" width="220px" id=imgMaconha alt="imagem qualquer" class="imagem fumavel comestivel" > </figure>
 				</article>
 
 
@@ -201,7 +114,7 @@
 			
 					<p>Relaxamento; Leve euforia; Tempo de reação mais lento; Percepção sensorial distorcida; Equilíbrio e coordenação prejudicados; Vermelhidão ocular, Aumento da frequência cardíaca e do apetite; Secura da boca. </p>
 
-					<figure><img src="../Imagens/haxixe.png" width="280px" img= "imgHaxixe" alt="imagem qualquer" class="imagem fumavel comestivel"> </figure>
+					<figure><img src="img/haxixe.png" width="280px" img= "imgHaxixe" alt="imagem qualquer" class="imagem fumavel comestivel"> </figure>
 				</article>
 
 
@@ -218,7 +131,7 @@
 				
 					<p>Estados alterados de percepção e de sentimento; Alucinações visuais e sonoras; Náuseas; Nervosismo; Paranóia; Pânico. </p>
 
-					<figure><img src="../Imagens/cogumelo.png" width="250px" alt="imagem qualquer" class="imagem comestivel"></figure>
+					<figure><img src="img/cogumelo.png" width="250px" alt="imagem qualquer" class="imagem comestivel"></figure>
 				</article>
 
 
@@ -235,7 +148,7 @@
 
 					<p> Euforia (imedita); Coordenação prejudicada; Tontura; Confusão; Sedação; Sonolência; Analgesia; Náusea; Hipotensão; Tranquilidade; Sensação de peso no corpo; Respiração retardada; Miose. </p>
 			
-					<figure><img src="../Imagens/opium.png" width="155px" alt="imagem qualquer"  class="imagem fumavel comestivel"></figure>
+					<figure><img src="img/opium.png" width="155px" alt="imagem qualquer"  class="imagem fumavel comestivel"></figure>
 				</article>
 				</div>
 
@@ -256,7 +169,7 @@
 					
 					<p>Euforia (imedita); Sedação; Supressão da dor; Depressão respiratória; Miose; Sonolência; Analgesia; Tranquilidade; Rigidez Muscular; Ansiedade; Possível Coma. </p>
 
-					<figure><img src="../Imagens/morfina.png" width="295px" alt="imagem qualquer"  class="imagem injetavel comestivel"></figure>
+					<figure><img src="img/morfina.png" width="295px" alt="imagem qualquer"  class="imagem injetavel comestivel"></figure>
 				</article>
 
 
@@ -273,7 +186,7 @@
 				
 					<p> Euforia (imediata); Coordenação prejudicada; Tontura; Confusão; Sedação; Sonolência; Analgesia; Náusea; Hipotensão; Tranquilidade; Sensação de peso no corpo; Respiração retardada; Miose. </p>
 
-					<figure><img src="../Imagens/heroina.png" width="290px" alt="imagem qualquer" class="imagem injetavel comestivel"> </figure>
+					<figure><img src="img/heroina.png" width="290px" alt="imagem qualquer" class="imagem injetavel comestivel"> </figure>
 				</article>
 		
 
@@ -290,7 +203,7 @@
 
 					<p> Aumento da freqüência cardíaca, da pressão arterial, da temperatura corporal, do metabolismo; Sentimentos de alegria; Euforia; Aumento da energia, do alerta mental; Tremores; Irritabilidade; ansiedade; Pânico; Paranóia; Comportamento violento; Psicose;. </p>
 
-					<figure><img src="../Imagens/cocaina.png" width="270px" alt="imagem qualquer" class="imagem injetavel comestivel"></figure>
+					<figure><img src="img/cocaina.png" width="270px" alt="imagem qualquer" class="imagem injetavel comestivel"></figure>
 				</article>
 
 
@@ -307,7 +220,7 @@
 				
 					<p> Aumento da freqüência cardíaca, da pressão arterial; Sentimentos de alegria; Euforia; Aumento da energia, do alerta mental; Tremores; Irritabilidade; ansiedade; Pânico; Paranóia; Comportamento violento; Psicose; Tremores; Perda de apetite; Alterações na percepção. </p>
 			
-					<figure><img src="../Imagens/crack.png" width="230px" alt="imagem qualquer" class="imagem injetavel fumavel"></figure>
+					<figure><img src="img/crack.png" width="230px" alt="imagem qualquer" class="imagem injetavel fumavel"></figure>
 				</article>
 			</div>
 
@@ -328,7 +241,7 @@
 
 					<p>Estados alterados de percepção e de sentimento; Alucinações visuais e sonoras; Náuseas; Aumento da temperatura corporal, da freqüência cardíaca, e da pressão arterial; Sudorese; insônia; Comportamento impulsivo. </p>
 
-					<figure><img src="../Imagens/lsd.png" width="170px" alt="imagem qualquer" class="imagem comestivel"></figure>
+					<figure><img src="img/lsd.png" width="170px" alt="imagem qualquer" class="imagem comestivel"></figure>
 				</article>
 
 
@@ -345,7 +258,7 @@
 
 					<p> Efeitos alucinogénicos leves; Sensibilidade tátil aumentada; Sentimentos empáticos; Inibição reduzida; Ansiedade; Arrepios; Sudorese e perda de líquidos; Bruxismo. </p>
 
-					<figure><img src="../Imagens/ecstasy.png" width="260px" alt="imagem qualquer" class="imagem injetavel comestivel"></figure>
+					<figure><img src="img/ecstasy.png" width="260px" alt="imagem qualquer" class="imagem injetavel comestivel"></figure>
 				</article>
 
 
@@ -362,7 +275,7 @@
 
 					<p> Aumento da freqüência cardíaca, da pressão arterial, da temperatura corporal, do metabolismo; Sentimentos de alegria; Euforia; Aumento da energia, do alerta mental; Perda de apetite; Irritabilidade; Ansiedade; Pânico; Paranóia; Comportamento violento; Psicose. </p>
 
-					<figure><img src="../Imagens/metanfetamina.png" width="200px" alt="imagem qualquer" class="imagem injetavel fumavel comestivel"></figure>
+					<figure><img src="img/metanfetamina.png" width="200px" alt="imagem qualquer" class="imagem injetavel fumavel comestivel"></figure>
 				</article>
 
 
@@ -379,7 +292,7 @@
 
 					<p>  Aumento da freqüência cardíaca, da pressão arterial, da temperatura corporal, do metabolismo; Sentimentos de alegria; Euforia; Aumento da energia, do alerta mental; Perda de apetite; Irritabilidade; Ansiedade; Pânico; Paranóia; Comportamento violento; Psicose.  </p>
 
-					<figure><img src="../Imagens/anfetamina.png" width="295px" alt="imagem qualquer"  class="imagem injetavel fumavel comestivel"></figure>
+					<figure><img src="img/anfetamina.png" width="295px" alt="imagem qualquer"  class="imagem injetavel fumavel comestivel"></figure>
 				</article>
 			</div>
 		</section>
@@ -387,7 +300,10 @@
 	    <footer>
 	        <hr>
 	        <h3>Não usem drogas, crianças!</h3>
-	        <h2>Website by Leonardo Sambonet ™</h2>
+	        <h2>Website by</h2>
+	        <h4>Alan César ™</h4>
+	        <h4>Débora Moura ™</h4>
+	        <h4>Leonardo Sambonet ™</h4>
 	       	<h3>Contato: ilovebatata@gmail.com <br>
 	       <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
 	       	<img id="imglicensa" alt="Licença Creative Commons" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
