@@ -8,6 +8,7 @@
 		<title> Lista de Drogas </title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="estilo2.css" type="text/css">
+		<script src="js/coockie.js"></script>
 	</head>
 
 	<body>
@@ -32,20 +33,20 @@
 
 			<h2 class="pergunta apresentacao">Questionário!</h2>
 			<h3 class="pergunta"> Qual a droga lhe pareceu mais divertida? </h3>
-			<form action="submit">
-				<input type="checkbox">Maconha
-				<input type="checkbox">Haxixe
-				<input type="checkbox">Cogumelos
-				<input type="checkbox">Ópio <br>
-				<input type="checkbox">Morfina
-				<input type="checkbox">Heroína
-				<input type="checkbox">Cocaína
-				<input type="checkbox">Crack <br>
-				<input type="checkbox">LSD 
-				<input type="checkbox">Ecstasy
-				<input type="checkbox">Metanfetamina
-				<input type="checkbox">Anfetamina <br>
-				<input id="enviar" class="pergunta" type="submit" value="Enviar">
+			<form name="drugform" action="javascript:void(0)">
+				<input type="checkbox" name="droga1" value="Maconha">Maconha
+				<input type="checkbox" name="droga2" value="Haxixe">Haxixe
+				<input type="checkbox" name="droga3" value="Cogumelos">Cogumelos
+				<input type="checkbox" name="droga4" value="Ópio">Ópio <br>
+				<input type="checkbox" name="droga5" value="Morfina">Morfina
+				<input type="checkbox" name="droga6" value="Heroína">Heroína
+				<input type="checkbox" name="droga7" value="Cocaína">Cocaína
+				<input type="checkbox" name="droga8" value="Crack">Crack <br>
+				<input type="checkbox" name="droga9" value="LSD">LSD 
+				<input type="checkbox" name="droga10" value="Ecstasy">Ecstasy
+				<input type="checkbox" name="droga11" value="Metanfetamina">Metanfetamina
+				<input type="checkbox" name="droga12" value="Anfetamina">Anfetamina <br>
+				<input id="enviar" class="pergunta" type="submit" value="Enviar" onclick="storeValues(drugform)">
 			</form>
 
 		</section>
